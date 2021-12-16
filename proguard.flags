@@ -75,3 +75,19 @@
 # Keep WM Jetpack classes and callbacks
 -keep class androidx.window.** { *; }
 -dontwarn androidx.window.extensions.**
+
+# Keep ImsConnector members for FeatureConnector.Listener<ImsManager>
+-keep class com.android.settings.deviceinfo.ImsConnector {
+    *;
+}
+
+# Custom rules
+-keep class vendor.** { *; }
+-keep class com.android.wsuinterface.** { *; }
+
+# For reflection
+-keepattributes InnerClasses
+-keep class **.R
+-keep class **.R$* {
+    <fields>;
+}

@@ -75,6 +75,11 @@ android_library {
     resource_zips: [
         ":FlamingoSettings_res",
     ],
+    resource_dirs: [
+        "res",
+        "res-pixel",
+        "DerpSpace/res",
+    ],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
@@ -109,7 +114,10 @@ android_library {
         "windowExtLib",
         "vendor_support",
         "powerusagefeaturegoogle",
+        "SettingsGoogle-lib",
     ],
+    manifest: "AndroidManifest.xml",
+    additional_manifests: ["SettingsGoogle-Manifest.xml"],
 
     libs: [
         "telephony-common",
